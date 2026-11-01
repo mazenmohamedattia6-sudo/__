@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>صيد القلوب 💗</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+<div class="neb neb-1"></div>
+<div class="neb neb-2"></div>
+
+<div class="page">
+  <header class="header">
+    <span class="eyebrow">لعبة صغيرة من مازن</span>
+    <h1 class="title">صيد القلوب 💗</h1>
+    <p class="header-sub">امسكي القلوب، وكل ما تجمعي أكتر تتفتح رسالة ليكِ</p>
+  </header>
+
+  <div class="hud">
+    <div class="hud-item"><span class="hud-lbl">القلوب</span><span class="hud-val" id="score">0</span></div>
+    <div class="hud-item"><span class="hud-lbl">المحاولات</span><span class="hud-val lives" id="lives">❤️❤️❤️</span></div>
+    <div class="hud-item"><span class="hud-lbl">أحسن نتيجة</span><span class="hud-val" id="best">0</span></div>
+    <button class="sound-btn" id="sound-btn" type="button" aria-label="الصوت">🔊</button>
+  </div>
+
+  <div class="frame" id="frame">
+    <canvas id="game"></canvas>
+
+    <div class="banner" id="banner"></div>
+
+    <div class="overlay active" id="ov-start">
+      <div class="ov-box">
+        <div class="ov-emoji">🧺💗</div>
+        <h2 class="ov-title">جاهزة؟</h2>
+        <p class="ov-text">حركي السلة بإصبعك أو الماوس أو الأسهم.<br>امسكي القلب 💗 والنجمة 🌟 (بـ 3 قلوب)،<br>وابعدي عن القلب المكسور 💔</p>
+        <button class="ov-btn" id="btn-start" type="button">ابدأي 💗</button>
+      </div>
+    </div>
+
+    <div class="overlay" id="ov-over">
+      <div class="ov-box">
+        <div class="ov-emoji">💔</div>
+        <h2 class="ov-title">قلبك وقع منك شوية!</h2>
+        <p class="ov-text" id="over-text"></p>
+        <button class="ov-btn" id="btn-retry" type="button">حاولي تاني 🔁</button>
+      </div>
+    </div>
+
+    <div class="overlay" id="ov-win">
+      <div class="ov-box ov-win">
+        <div class="ov-emoji">👑</div>
+        <h2 class="ov-title">كسبتِ يا ملك!</h2>
+        <p class="ov-letter" id="win-text"></p>
+        <button class="ov-btn" id="btn-again" type="button">العبي تاني 🔁</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="collection">
+    <h3 class="col-title">رسايلك</h3>
+    <div class="col-grid" id="col-grid"></div>
+  </section>
+
+  <p class="footer">مازن — أبو ليلي 🌙</p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
